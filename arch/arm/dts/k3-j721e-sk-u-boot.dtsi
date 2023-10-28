@@ -1,0 +1,157 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (C) 2021 Texas Instruments Incorporated - https://www.ti.com/
+ */
+
+#include "k3-j721e-binman.dtsi"
+
+&cbass_main {
+	bootph-pre-ram;
+};
+
+&main_navss {
+	bootph-pre-ram;
+};
+
+&cbass_mcu_wakeup {
+	bootph-pre-ram;
+
+	chipid@43000014 {
+		bootph-pre-ram;
+	};
+};
+
+&mcu_navss {
+	bootph-pre-ram;
+};
+
+&mcu_ringacc {
+		bootph-pre-ram;
+};
+
+&mcu_udmap {
+	reg =	<0x0 0x285c0000 0x0 0x100>,
+		<0x0 0x284c0000 0x0 0x4000>,
+		<0x0 0x2a800000 0x0 0x40000>,
+		<0x0 0x284a0000 0x0 0x4000>,
+		<0x0 0x2aa00000 0x0 0x40000>,
+		<0x0 0x28400000 0x0 0x2000>;
+		reg-names = "gcfg", "rchan", "rchanrt", "tchan",
+			    "tchanrt", "rflow";
+		bootph-pre-ram;
+};
+
+&secure_proxy_main {
+	bootph-pre-ram;
+};
+
+&dmsc {
+	bootph-pre-ram;
+	k3_sysreset: sysreset-controller {
+		compatible = "ti,sci-sysreset";
+		bootph-pre-ram;
+	};
+};
+
+&k3_pds {
+	bootph-pre-ram;
+};
+
+&k3_clks {
+	bootph-pre-ram;
+};
+
+&k3_reset {
+	bootph-pre-ram;
+};
+
+&wkup_pmx0 {
+	bootph-pre-ram;
+};
+
+&main_pmx0 {
+	bootph-pre-ram;
+};
+
+&main_uart0 {
+	bootph-pre-ram;
+};
+
+&mcu_uart0 {
+	bootph-pre-ram;
+};
+
+&main_sdhci1 {
+	bootph-pre-ram;
+};
+
+&main_uart0_pins_default {
+	bootph-pre-ram;
+};
+
+&main_usbss0_pins_default {
+	bootph-pre-ram;
+};
+
+&usbss0 {
+	bootph-pre-ram;
+};
+
+&usb0 {
+	dr_mode = "host";
+	bootph-pre-ram;
+};
+
+&main_usbss1_pins_default {
+	bootph-pre-ram;
+};
+
+&usbss1 {
+	bootph-pre-ram;
+};
+
+&usb1 {
+	dr_mode = "host";
+	bootph-pre-ram;
+};
+
+&main_mmc1_pins_default {
+	bootph-pre-ram;
+};
+
+&wkup_i2c0_pins_default {
+	bootph-pre-ram;
+};
+
+&wkup_i2c0 {
+	bootph-pre-ram;
+};
+
+&wkup_uart0 {
+	bootph-pre-ram;
+	status = "okay";
+};
+
+&mcu_fss0_ospi0_pins_default {
+	bootph-pre-ram;
+};
+
+&fss {
+	bootph-pre-ram;
+};
+
+&main_esm {
+	bootph-pre-ram;
+};
+
+&ospi0 {
+	bootph-pre-ram;
+
+	flash@0 {
+		bootph-pre-ram;
+
+		partition@3fc0000 {
+			bootph-pre-ram;
+		};
+	};
+};
